@@ -1,0 +1,135 @@
+/* Longer Lines Spinning */
+.spinBox {
+  height: 222px;
+  width: 222px;
+  margin: 20px auto;
+  animation: rotate 6s infinite linear;
+}
+.line1 {
+  width: 100px;
+  height: 100px;
+  border-right: 2px solid black;
+  margin-bottom: 10px;
+  margin-left: 11px;
+  animation: flash 6s infinite linear;
+}
+.line2 {
+  width: 100px;
+  height: 100px;
+  border-right: 2px solid black;
+  margin-left: -1px;
+  transform: rotate(90deg);
+  margin-top: -99px;
+  animation: flash 6s infinite 1.5s linear;
+}
+.line3 {
+  width: 100px;
+  height: 100px;
+  border-right: 2px solid black;
+  margin-top: 11px;
+  margin-left: 111px;
+  transform: rotate(180deg);
+  animation: flash 6s infinite 3s linear;
+}
+.line4 {
+  width: 100px;
+  height: 100px;
+  border-right: 2px solid black;
+  margin-top: -111px;
+  margin-left: 122px;
+  margin-bottom: 10px;
+  transform: rotate(270deg);
+  animation: flash 6s infinite 4.5s linear;
+}
+
+/* Shorter Lines Spinning */
+.spinBox2 {
+  height: 222px;
+  width: 222px;
+  border: 2px solid blue;
+  border-radius: 50%;
+  margin: -244px auto 20px auto;
+  transform: rotate(45deg);
+  animation: rotate2 6s infinite linear;
+}
+.line5 {
+  width: 100px;
+  height: 50px;
+  border-right: 2px solid red;
+  margin-left: 11px;
+  animation: flash2 6s infinite linear;
+}
+.line6{
+  width: 100px;
+  height: 50px;
+  border-right: 2px solid red;
+  margin-left: -26px;
+  margin-top: -14px;
+  transform: rotate(90deg);
+  animation: flash2 6s infinite 1.5s linear;
+}
+.line7 {
+  width: 100px;
+  height: 50px;
+  border-right: 2px solid red;
+  margin-top: 86px;
+  margin-left: 111px;
+  transform: rotate(180deg);
+  animation: flash2 6s infinite 3s linear;
+}
+.line8 {
+  width: 100px;
+  height: 50px;
+  border-right: 2px solid red;
+  transform: rotate(270deg);
+  margin-top: -86px;
+  margin-left: 146px;
+  animation: flash2 6s infinite 4.5s linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0)
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotate(45deg)
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes flash {
+  0% {
+    border-right: 2px solid black;
+  }
+  40% {
+    border-right: 2px solid yellow;
+  }
+  60%{
+    border-right: 2px solid yellow;
+  }
+  100% {
+    border-right: 2px solid black;
+  }
+}
+
+@keyframes flash2 {
+  0% {
+    border-right: 2px solid red;
+  }
+  20% {
+    border-right: 2px solid green;
+  }
+  40%{
+    border-right: 2px solid green;
+  }
+  100% {
+    border-right: 2px solid red;
+  }
+}

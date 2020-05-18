@@ -1,0 +1,24 @@
+{
+  "name": "hpredux",
+  "version": "1.0.0",
+  "description": "Harry Potter",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianb13/MERN-HP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianb13/MERN-HP/issues"
+  },
+  "homepage": "https://github.com/adrianb13/MERN-HP#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.14"
+  }
+}

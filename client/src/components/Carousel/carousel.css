@@ -1,0 +1,28 @@
+.back {
+  flex-wrap: nowrap;
+}
+.container {
+  width: 100vw;
+  height: 600px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  background: gray;
+}
+.slideBox {
+  display: inline-block;
+  width: 400px;
+  height: 500px;
+  border: 3px solid black;
+  margin: 47px 20px;
+  animation: slide 5s infinite linear; 
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-446px);
+  }
+}
