@@ -1,11 +1,14 @@
 const router = require("express").Router();
-const characterController;
-const spellController;
+const spellController = require("../../controllers/spellController");
 
 router
-  .route("/characters");
+  .route("/")
+  .get(spellController.findAll)
+  .post(spellController.create);
 
 router
-  .route("/spells");
+  .route("/:id")
+  .put(spellController.update)
+  .delete(spellController.remove);
 
 module.exports = router;
