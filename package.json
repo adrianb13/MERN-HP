@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/adrianb13/MERN-HP#readme",
   "dependencies": {
+    "concurrently": "^5.2.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.14"
+    "if-env": "^1.0.4",
+    "mongoose": "^5.9.14",
+    "nodemon": "^2.0.4"
   }
 }
