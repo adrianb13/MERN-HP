@@ -3,7 +3,7 @@ const characterRoutes = require("./characterRoutes");
 const spellRoutes = require("./spellRoutes");
 
 //Routes
-router.use("/character", characterRoutes);
-router.use("/spell", spellRoutes);
+router.use("/characters", characterRoutes);
+router.use("/spells", spellRoutes);
 
 module.exports = router;

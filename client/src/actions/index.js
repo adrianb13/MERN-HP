@@ -1,0 +1,159 @@
+import API from "../utils/API";
+import * as types from "./types";
+
+export const getSorted = () => {
+  return (dispatch) => {
+    return API.getSorted()
+    .then(res => {
+      dispatch(getAPISortedSuccess(res.data))
+    })
+    .catch(err => console.log(err));
+  };
+};
+
+const getAPISortedSuccess = (house) => {
+  return {type: types.GET_SORTED_SUCCESS, house}
+};
+
+export const getAPICharacters = () => {
+  return (dispatch) => {
+    return API.getAPICharacters()
+    .then(res => {
+      dispatch(getAPICharSuccess(res.data))
+    })
+    .catch(err => console.log(err));
+  };
+};
+
+const getAPICharSuccess = (characters) => {
+  return {type: types.GET_APICHARACTERS_SUCCESS, characters}
+};
+
+export const getAPISpells = () => {
+  return (dispatch) => {
+    return API.getAPISpells()
+    .then(res => {
+      dispatch(getAPISpellSuccess(res.data))
+    })
+    .catch(err => console.log(err));
+  };
+};
+
+const getAPISpellSuccess = (spells) => {
+  return {type: types.GET_APISPELLS_SUCCESS, spells};
+};
+
+//MongoDB
+//Character
+export const getDBCharacters = () => {
+  return (dispatch) => {
+    return API.getDBCharacters()
+    .then(res => {
+      dispatch(getDBCharSuccess(res.data))
+    })
+    .catch(err => console.log(err));
+  };
+};
+
+const getDBCharSuccess = (characters) => {
+  return {type: types.GET_DBCHARACTERS_SUCCESS, characters}
+};
+
+export const saveCharacter = () => {
+  return (dispatch) => {
+    return API.saveCharacter()
+    .then(res => {
+      dispatch(saveCharSuccess(res.data))
+    })
+    .catch(err => console.log(err));
+  };
+};
+
+const saveCharSuccess = (characters) => {
+  return {type: types.SAVE_CHARACTER_SUCCESS, characters}
+};
+
+export const updateCharacter = () => {
+  return (dispatch) => {
+    return API.updateCharacter()
+    .then(res => {
+      dispatch(updateCharSuccess(res.data))
+    })
+    .catch(err => console.log(err));
+  };
+};
+
+const updateCharSuccess = (characters) => {
+  return {type: types.UPDATE_CHARACTER_SUCCESS, characters}
+};
+
+export const deleteCharacter = () => {
+  return (dispatch) => {
+    return API.deleteCharacter()
+    .then(res => {
+      dispatch(deleteCharSuccess(res.data))
+    })
+    .catch(err => console.log(err));
+  };
+};
+
+const deleteCharSuccess = (characters) => {
+  return {type: types.DELETE_CHARACTER_SUCCESS, characters}
+};
+
+//Spells
+export const getDBSpells = () => {
+  return (dispatch) => {
+    return API.getDBSpells()
+    .then(res => {
+      dispatch(getDBSpellSuccess(res.data))
+    })
+    .catch(err => console.log(err));
+  };
+};
+
+const getDBSpellSuccess = (Spells) => {
+  return {type: types.GET_DBSPELLS_SUCCESS, Spells}
+};
+
+export const saveSpell = () => {
+  return (dispatch) => {
+    return API.saveSpell()
+    .then(res => {
+      dispatch(saveSpellSuccess(res.data))
+    })
+    .catch(err => console.log(err));
+  };
+};
+
+const saveSpellSuccess = (Spells) => {
+  return {type: types.SAVE_SPELL_SUCCESS, Spells}
+};
+
+export const updateSpell = () => {
+  return (dispatch) => {
+    return API.updateSpell()
+    .then(res => {
+      dispatch(updateSpellSuccess(res.data))
+    })
+    .catch(err => console.log(err));
+  };
+};
+
+const updateSpellSuccess = (Spells) => {
+  return {type: types.UPDATE_SPELL_SUCCESS, Spells}
+};
+
+export const deleteSpell = () => {
+  return (dispatch) => {
+    return API.deleteSpell()
+    .then(res => {
+      dispatch(deleteSpellSuccess(res.data))
+    })
+    .catch(err => console.log(err));
+  };
+};
+
+const deleteSpellSuccess = (Spells) => {
+  return {type: types.DELETE_SPELL_SUCCESS, Spells}
+};

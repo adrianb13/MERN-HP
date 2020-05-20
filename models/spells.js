@@ -3,13 +3,21 @@ const Schema = mongoose.Schema;
 
 const spellSchema = new Schema({
   spellId: {
-    type: String,
+    type: Number,
     required: true,
     unique: true
   },
   name: { 
     type: String, 
     required: true 
+  },
+  type: {
+    type: String,
+    required: true
+  },
+  effect: {
+    type: String,
+    required: true
   }
 });
 

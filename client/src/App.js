@@ -1,17 +1,27 @@
 import React from 'react';
-import './App.css';
-import Carousel from "./components/Carousel";
-import Spinner from "./components/Spinner";
+import { Router, Switch, Route } from "react-router-dom";
+import { createBrowserHistory } from "history";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Carousel /> 
-        <Spinner />
-      </header>
-    </div>
-  );
-}
+import './App.css';
+import Home from "./components/Home";
+import Spells from "./components/Spells";
+
+const history = createBrowserHistory({ basename: ""})
+
+class App extends React.Component {
+  render(){
+    return (
+      <Router history={history}>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/spells" component={Spells} />
+          </Switch>
+        </div>
+      </Router>
+      
+    )
+  };
+};
 
 export default App;
