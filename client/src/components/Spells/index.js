@@ -38,7 +38,11 @@ class Spells extends React.Component {
   render (){
     return (
       <div className="spellPage">
-        <div className="spellHeader">~ SPELLS ~</div>
+        <div className="spellHeader">
+          <div className="spellWord"></div>
+          <div className="spellWord2"></div>
+          <div>~ SPELLS ~</div>
+        </div>
         {this.state.spellsPresent ? (
           <div className="spellArea">
             {this.state.spells.map(spell => (

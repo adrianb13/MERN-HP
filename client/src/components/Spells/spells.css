@@ -14,8 +14,28 @@
   font-weight: bold;
   box-shadow: inset 0px -5px 10px blue,
   0px 5px 10px blue;
-  padding-top: 20px;
+  padding-bottom: 10px;
   margin-bottom: 10px;
+}
+.spellWord {
+  width: 400px;
+  height: 70px;
+  border-left: 4px solid red;
+  border-right: 4px solid red;
+  border-radius: 50%;
+  padding-top: 20px;
+  margin: 20px auto -110px;
+  animation: spin 7s infinite linear;
+}
+.spellWord2 {
+  width: 400px;
+  height: 70px;
+  border-left: 4px solid blue;
+  border-right: 4px solid blue;
+  border-radius: 50%;
+  padding-top: 20px;
+  margin: 20px auto -75px;
+  animation: spin2 7s infinite linear;
 }
 .spellArea {
   height: 100vh;
@@ -24,7 +44,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   overflow: scroll;
-  padding-top: 200px;
+  padding-top: 210px;
 }
 .spellBox {
   margin: 10px 0;
@@ -51,7 +71,7 @@
 }
 /* Pulse when hovering over spell */
 .spellBox:hover .spiral {
-  animation: aura 2s infinite;
+  animation: aura 2s 1;
 }
 
 @keyframes aura {
@@ -73,5 +93,33 @@
     width: 280px;
     margin: -165px -135px -215px -25px; 
     z-index: 5;
+  }
+}
+
+@keyframes spin {
+  0% {
+    width: 400px;
+    transform: rotateY(0deg);
+  }
+  50%{
+    width: 450px;
+  }
+  100% {
+    width: 400px;
+    transform: rotateY(720deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    width: 400px;
+    transform: rotateX(0deg);
+  }
+  50%{
+    width: 450px;
+  }
+  100% {
+    width: 400px;
+    transform: rotateX(720deg);
   }
 }
