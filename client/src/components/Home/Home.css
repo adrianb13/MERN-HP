@@ -1,0 +1,66 @@
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: url("../../assets/images/Parchment.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  font-size: 60px;
+  padding-top: 10px;
+}
+.bannerText {
+  width: 50%;
+}
+.mark {
+  height: 70px;
+  width: 50px;
+  background: url("../../assets/images/Mark.png") no-repeat;
+  background-size: auto 70px;
+  margin: 0 10px 0 0;
+}
+.glasses {
+  width: 70px;
+  background: url("../../assets//images/Glasses.png") no-repeat;
+  background-size: 70px auto;
+  margin-top: 25px;
+}
+
+.homeBack {
+  height: 100vh;
+  background: url("../../assets/images/HPExpress.jpg") no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.homeEnter {
+  width: auto;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 40px;
+  border-radius: 10px;
+  padding: 10px 10px 0;
+  margin: 0 auto;
+  transition: 1s;
+}
+.homeEnter:hover {
+  background: red;
+  font-size: 50px;
+}
+.homeLink:hover .otherColor {
+  color: yellow;
+}
+
+@media (max-width:400px){
+  .banner {
+    display: flex;
+    justify-content: center;
+  }
+  .mark {
+    margin: 50px 0 0 0;
+  }
+  .glasses {
+    margin: 70px 0 0 0;
+  }
+}
