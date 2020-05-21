@@ -1,48 +1,76 @@
 import React from "react";
-import API from "../../utils/API";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as actions from "../../actions/index";
+import "./spells.css";
+
 
 class Spells extends React.Component {
-  state = {
-    spells: [],
-    spellsPresent: false
-  }
+  constructor(props){
+    super(props)
+
+    this.state = {
+      spells: [],
+      spellsPresent: false
+    }
+  };
 
   componentDidMount = () => {
     this.getSpellsList();
-  }
+  };
+
+  componentDidUpdate = (nextProps) => {
+    if(this.props.apiSpells !== nextProps.apiSpells){
+      this.getSpellsList();
+    };
+  };
 
   getSpellsList = () => {
-    API.getAPISpells()
-    .then(res => {
+    if(this.props.apiSpells.length !== 0){
       this.setState({
-        spells: res.data,
+        spells: this.props.apiSpells,
         spellsPresent: true
-      }, () => console.log(this.state.spells))
-    });
+      }, () =>{ console.log(this.state.spells)})
+    }
   }
 
   render (){
     return (
-      <div className="App">
-        <header className="App-header">
-          {this.state.spellsPresent ? (
-            <div>
-              <div>SPELLS</div>
-              {this.state.spells.map(spell => (
-                <div key={spell.item}>
+      <div className="spellPage">
+        <div className="spellHeader">~ SPELLS ~</div>
+        {this.state.spellsPresent ? (
+          <div className="spellArea">
+            {this.state.spells.map(spell => (
+              <div className="spellBox">
+                <div className="spiral"></div>
+                <div key={spell._id} className="spellCard">
                   <div>Name: {spell.spell}</div>
                   <div>Type: {spell.type}</div>
-                  <div>Effect: {spell.effect}</div>
+                  <div>Effect: {spell.effect}</div>  
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div>Spells Are Currently Forbidden By The Ministry Of Magic!!!</div>
-          )}
-        </header>
+                
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div>Spells Are Currently Forbidden By The Ministry Of Magic!!!</div>
+        )}
       </div>
     );
   };
-}
+};
 
-export default Spells;
+const mapStateToProps = state => {
+  return {
+    apiSpells: state.apiSpells
+  }
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  };
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Spells));

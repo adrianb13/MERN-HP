@@ -112,8 +112,8 @@ export const getDBSpells = () => {
   };
 };
 
-const getDBSpellSuccess = (Spells) => {
-  return {type: types.GET_DBSPELLS_SUCCESS, Spells}
+const getDBSpellSuccess = (spells) => {
+  return {type: types.GET_DBSPELLS_SUCCESS, spells}
 };
 
 export const saveSpell = () => {
@@ -126,8 +126,8 @@ export const saveSpell = () => {
   };
 };
 
-const saveSpellSuccess = (Spells) => {
-  return {type: types.SAVE_SPELL_SUCCESS, Spells}
+const saveSpellSuccess = (spells) => {
+  return {type: types.SAVE_SPELL_SUCCESS, spells}
 };
 
 export const updateSpell = () => {
@@ -140,8 +140,8 @@ export const updateSpell = () => {
   };
 };
 
-const updateSpellSuccess = (Spells) => {
-  return {type: types.UPDATE_SPELL_SUCCESS, Spells}
+const updateSpellSuccess = (spells) => {
+  return {type: types.UPDATE_SPELL_SUCCESS, spells}
 };
 
 export const deleteSpell = () => {
@@ -154,6 +154,6 @@ export const deleteSpell = () => {
   };
 };
 
-const deleteSpellSuccess = (Spells) => {
-  return {type: types.DELETE_SPELL_SUCCESS, Spells}
+const deleteSpellSuccess = (spells) => {
+  return {type: types.DELETE_SPELL_SUCCESS, spells}
 };

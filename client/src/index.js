@@ -6,12 +6,14 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 import store from "./store";
+import { getAPICharacters, getAPISpells } from "./actions/index";
 
-//store.dispatch();
+store.dispatch(getAPICharacters());
+store.dispatch(getAPISpells());
 
 ReactDOM.render(
-  <Provider>
-    <App />
+  <Provider store={store}>
+    <App /> 
   </Provider>, 
   document.getElementById("root")
 );

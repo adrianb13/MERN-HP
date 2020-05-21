@@ -1,0 +1,77 @@
+.spellPage {
+  background: url("../../assets/images/DH1.jpg") repeat;
+  background-size: 100% auto;
+  color: white;
+  cursor: url("../../assets/images/Wand3.png"), auto;
+}
+.spellHeader { 
+  width: 100%;
+  position: fixed;
+  background: black;
+  color: silver;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  box-shadow: inset 0px -5px 10px blue,
+  0px 5px 10px blue;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+.spellArea {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow: scroll;
+  padding-top: 200px;
+}
+.spellBox {
+  margin: 10px 0;
+}
+.spellCard {
+  width: 220px;
+  height: 150px;
+  font-size: 20px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px 0 75px 0;
+}
+.spellBox:hover .spellCard {
+  color: yellow;
+}
+.spiral {
+  height: 1px;
+  width: 1px;
+  border: 1px solid rgba(255, 255, 0, 0);
+  border-radius: 50%;
+  margin: -1px 0 -100px 115px;
+  z-index: -1;
+}
+/* Pulse when hovering over spell */
+.spellBox:hover .spiral {
+  animation: aura 2s infinite;
+}
+
+@keyframes aura {
+  0% {
+    color: yellow;
+    border: 1px solid rgba(255, 255, 0, 1); 
+    box-shadow: inset 10px 10px 20px rgba(255, 255, 0, 1),
+    inset 10px -10px 20px rgba(255, 255, 0, 1),
+    inset -10px 10px 20px rgba(255, 255, 0, 1),
+    inset -10px -10px 20px rgba(255, 255, 0, 1);
+    height: 1px;
+    width: 1px;
+    z-index: 1;
+  }
+  100% {
+    color: yellow;
+    border: 1px solid rgba(255, 255, 0, 0);
+    height: 280px;
+    width: 280px;
+    margin: -165px -135px -215px -25px; 
+    z-index: 5;
+  }
+}
