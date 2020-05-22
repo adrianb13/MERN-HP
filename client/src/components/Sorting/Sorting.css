@@ -1,0 +1,71 @@
+.sortBanner {
+
+}
+.sortHeader {
+  width: 250px;
+  background: rgba(222, 184, 135, 0.8);
+  color: black;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 50px;
+  padding-top: 20px;
+  margin: 10px auto;
+}
+.sortBack {
+  height: 100vh;
+  background: url("../../assets/images/Houses3.jpg") no-repeat;
+  background-size: 100% 100%;
+  padding-top: 10px;
+}
+/* .sortArea {
+  height: 78%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+.sortIntro {
+  width: 45%;
+  align-self: center;
+  text-align: center;
+  background: burlywood;
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 20px 20px 0px;
+  margin: 0 auto;
+}
+.sorted {
+  color: Purple;
+  font-size: 30px;
+  font-weight: bold;
+  border-top: 2px solid black;
+  padding-top: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.enterHouse {
+  height: 27vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.enter {
+  align-self: center;
+}
+.enter a{
+  font-size: 40px;
+  animation: enterNow 2s infinite linear;
+}
+
+@keyframes enterNow {
+  0%{
+    font-size: 40px;
+  }
+  60%{
+    font-size: 60px;
+    color: white;
+  }
+  100%{
+    font-size: 40px;
+  }
+}
