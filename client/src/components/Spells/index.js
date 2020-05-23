@@ -12,7 +12,8 @@ class Spells extends React.Component {
 
     this.state = {
       spells: [],
-      spellsPresent: false
+      spellsPresent: false,
+      none: false
     }
   };
 
@@ -23,17 +24,18 @@ class Spells extends React.Component {
   componentDidUpdate = (nextProps) => {
     if(this.props.apiSpells !== nextProps.apiSpells){
       this.getSpellsList();
-    };
-  };
+    }
+  }
 
   getSpellsList = () => {
-    if(this.props.apiSpells.length !== 0){
+    console.log("getting")
+    if(this.props.apiSpells){
       this.setState({
         spells: this.props.apiSpells,
         spellsPresent: true
-      }, () =>{ console.log(this.state.spells)})
-    }
-  }
+      }, () => {console.log(this.state.spells)})
+    } 
+  };
 
   render (){
     return (
@@ -46,9 +48,9 @@ class Spells extends React.Component {
         {this.state.spellsPresent ? (
           <div className="spellArea">
             {this.state.spells.map(spell => (
-              <div className="spellBox">
+              <div className="spellBox" key={spell._id}>
                 <div className="spiral"></div>
-                <div key={spell._id} className="spellCard">
+                <div className="spellCard">
                   <div>Name: {spell.spell}</div>
                   <div>Type: {spell.type}</div>
                   <div>Effect: {spell.effect}</div>  
@@ -58,7 +60,7 @@ class Spells extends React.Component {
             ))}
           </div>
         ) : (
-          <div>Spells Are Currently Forbidden By The Ministry Of Magic!!!</div>
+          <div className="spellArea">Spells Are Currently Forbidden By The Ministry Of Magic!!!</div>
         )}
       </div>
     );

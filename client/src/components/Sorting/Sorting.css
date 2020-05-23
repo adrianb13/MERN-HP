@@ -41,20 +41,32 @@
   padding-top: 10px;
   margin-top: 10px;
   cursor: pointer;
+  animation: sortedColor 2s infinite;
+}
+.sorted2 {
+  color: black;
+  animation: none;
 }
 
 .enterHouse {
-  height: 27vh;
+  height: 26vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 .enter {
   align-self: center;
-}
-.enter a{
   font-size: 40px;
   animation: enterNow 2s infinite linear;
+}
+.white {
+  color: white;
+}
+
+@media(max-width: 775px){
+  .sortBack{
+    height: 100%;
+  }
 }
 
 @keyframes enterNow {
@@ -67,5 +79,17 @@
   }
   100%{
     font-size: 40px;
+  }
+}
+
+@keyframes sortedColor {
+  0%{
+    color: purple;
+  }
+  60%{
+    color: silver;
+  }
+  100% {
+    color: purple;
   }
 }

@@ -4,7 +4,8 @@ const initialState = {
   apiCharacters: [],
   apiSpells: [],
   dbCharacters: [],
-  dbSpells: []
+  dbSpells: [],
+  house: "Hogwarts"
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -79,6 +80,10 @@ const rootReducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         dbSpells: currSpells1
       });
+    case types.GET_HOUSE_SUCCESS:
+      return { house: state.house }
+    case types.ASSIGN_HOUSE_SUCCESS:
+      return {house: action.house}
     default: 
       return state;
   }

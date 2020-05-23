@@ -1,3 +1,4 @@
+/* Banner */
 .banner {
   display: flex;
   flex-direction: row;
@@ -17,14 +18,23 @@
   background: url("../../assets/images/Mark.png") no-repeat;
   background-size: auto 70px;
   margin: 0 10px 0 0;
+  opacity: 0;
+  transition: 1s;
 }
 .glasses {
   width: 70px;
   background: url("../../assets//images/Glasses.png") no-repeat;
   background-size: 70px auto;
   margin-top: 25px;
+  opacity: 0;
+  transition: 1s;
 }
 
+.banner:hover .mark, .banner:hover .glasses {
+  opacity: 1;
+}
+
+/* Body */
 .homeBack {
   height: 100vh;
   background: url("../../assets/images/HPExpress.jpg") no-repeat;
@@ -47,6 +57,7 @@
 .homeEnter:hover {
   background: red;
   font-size: 50px;
+  animation: pulseOut 1.5s infinite linear;
 }
 .homeLink:hover .otherColor {
   color: yellow;
@@ -65,5 +76,22 @@
   }
   .homeEnter {
     width: 80%;
+  }
+}
+
+@keyframes pulseOut {
+  0%{
+    border: 1px solid red;
+  }
+  60%{
+    border: 1px solid yellow;
+    box-shadow: inset 1px 1px 15px yellow,
+    inset -1px 1px 15px yellow,
+    inset 1px -1px 15px yellow,
+    inset -1px -1px 15px yellow;
+    padding: 20px 20px 10px;
+  }
+  100%{
+    border: 1px solid red;
   }
 }

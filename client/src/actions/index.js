@@ -157,3 +157,23 @@ export const deleteSpell = () => {
 const deleteSpellSuccess = (spells) => {
   return {type: types.DELETE_SPELL_SUCCESS, spells}
 };
+
+export const getHouse = () => {
+  return (dispatch) => {
+    dispatch(getHouseSuccess())
+  };
+};
+
+const getHouseSuccess = () => {
+  return {type: types.GET_HOUSE_SUCCESS}
+}
+
+export const assignHouse = (house) => {
+  return (dispatch) => {
+    dispatch(assignHouseSuccess(house))
+  };
+};
+
+const assignHouseSuccess = (house) => {
+  return {type: types.ASSIGN_HOUSE_SUCCESS, house}
+};

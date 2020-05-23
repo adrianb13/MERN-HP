@@ -1,0 +1,69 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+.modal-main {
+  position: fixed;
+  width: 300px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: whitesmoke;
+  border-radius: 15px;
+  padding: 10px;
+}
+.modalDisBl {
+  display: block;
+}
+.modalDisNone {
+  display: none;
+}
+.modalTxt {
+  text-align: center;
+  font-size: 30px;
+}
+.modalButBox {
+  width: 90%;
+  position: fixed;
+  bottom: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 8px;
+}
+.modalBut {
+  width: 80%;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgb(0, 0, 0, 0.7);
+  border-radius: 5px;
+  padding: 5px 10px 0;
+  margin: 10px auto;
+}
+
+.gryffindor {
+  background: url("../../assets/images/Gryffindor.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.slytherin {
+  color: white;
+  background: url("../../assets/images/Slytherin.png") no-repeat;
+  background-size: 100% 100%;
+}
+.hufflepuff {
+  background: url("../../assets/images/Hufflepuff.png") no-repeat;
+  background-size: 100% 100%;
+}
+.ravenclaw {
+  color: white;
+  background: url("../../assets/images/Ravenclaw.jpg") no-repeat;
+  background-size: 100% 100%;
+}
