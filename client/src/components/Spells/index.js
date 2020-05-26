@@ -1,14 +1,15 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actions from "../../actions/index";
 import "./spells.css";
 
+let count = 1;
 
 class Spells extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
 
     this.state = {
       spells: [],
@@ -22,19 +23,21 @@ class Spells extends React.Component {
   };
 
   componentDidUpdate = (nextProps) => {
+    console.log("next")
     if(this.props.apiSpells !== nextProps.apiSpells){
       this.getSpellsList();
     }
   }
 
   getSpellsList = () => {
-    console.log("getting")
     if(this.props.apiSpells){
       this.setState({
         spells: this.props.apiSpells,
         spellsPresent: true
       }, () => {console.log(this.state.spells)})
     } 
+    console.log(count)
+    count ++;
   };
 
   render (){
@@ -44,6 +47,9 @@ class Spells extends React.Component {
           <div className="spellWord"></div>
           <div className="spellWord2"></div>
           <div>~ SPELLS ~</div>
+        </div>
+        <div className="spellExit">
+          <Link to="/sorting">Exit Spells Room</Link>
         </div>
         {this.state.spellsPresent ? (
           <div className="spellArea">
@@ -68,6 +74,7 @@ class Spells extends React.Component {
 };
 
 const mapStateToProps = state => {
+  console.log(state.apiSpells)
   return {
     apiSpells: state.apiSpells
   }
