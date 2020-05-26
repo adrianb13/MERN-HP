@@ -5,6 +5,7 @@ import { createBrowserHistory } from "history";
 import './App.css';
 import Home from "./components/Home";
 import Sorting from "./components/Sorting";
+import Houses from "./components/Houses";
 import Spells from "./components/Spells";
 
 const history = createBrowserHistory({ basename: ""})
@@ -17,6 +18,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/sorting" component={Sorting} />
+            <Route exact path="/:house" component={Houses} />
             <Route exact path="/spells" component={Spells} />
           </Switch>
         </div>
