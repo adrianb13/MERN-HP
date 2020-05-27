@@ -1,0 +1,96 @@
+.houseBack{
+  height: 100vh;
+  padding-bottom: 10%;
+}
+.hogwarts {
+  background: url("../../assets/images/Hallway.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.gryffindor {
+  color: goldenrod;
+  background: url("../../assets/images/GryffindorRoom.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-color: red;
+}
+.slytherin {
+  color: lime;
+  background: url("../../assets/images/SlytherinRoom.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-color: black;
+}
+.hufflepuff {
+  background: url("../../assets/images/HufflepuffRoom.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-color: yellow;
+}
+.ravenclaw {
+  color: white;
+  background: url("../../assets/images/RavenclawRoom.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-color: dodgerblue;
+}
+
+.welcomeBanner {
+  text-align: center;
+  font-size: 50px;
+  padding: 20px 10px 0;
+  margin: 0 auto;
+}
+.welcomeLocation {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.houseArea {
+  width: 80%;
+  background: rgba(128, 128, 128, 0.8);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px 0;
+  margin: 6% auto 0;
+}
+.houseCommons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.houseInfo1 {
+  width: 40%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+}
+.houseTitle {
+  color: burlywood;
+  font-size: 25px;
+}
+.houseText {
+  margin-bottom: 15px;
+}
+.otherRooms {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  border-top: 2px solid black;
+  padding: 20px 0;
+  margin: 25px auto 0;
+}
+
+@media (max-width: 500px) {
+  .houseBack {
+    height: 100%;
+    padding-bottom: 15%;
+  }
+  .houseCommons {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .houseInfo1 {
+    width: 90%;
+  }
+}

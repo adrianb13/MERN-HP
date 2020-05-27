@@ -72,7 +72,7 @@ class Sorting extends React.Component{
   }
 
   entrance = () => {
-    this.props.history.push("/spells")
+    this.props.history.push("/" + this.state.house)
   }
 
   render(){

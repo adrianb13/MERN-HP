@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Gryffindor",
+    "founder": "Godric Gryffindor",
+    "traits": "Members are known for their nerve, chivalry, daring, courage, bravery, and determination.",
+    "headOfHouse": "Minerva McGonagall",
+    "ghost": "Nearly Headless Nick",
+    "location": "Gryffindor Tower"
+  },
+  {
+    "name": "Slytherin",
+    "founder": "Salazar Slytherin",
+    "traits": "Members are known for their cunning, ambition, and tendency to look after their own.",
+    "headOfHouse": "Severus Snape",
+    "ghost": "Bloody Baron",
+    "location": "Slytherin Dungeon"
+  },
+  {
+    "name": "Hufflepuff",
+    "founder": "Helga Hufflepuff",
+    "traits": "Members are known for their trustworthiness, loyalty, and strong work ethic.",
+    "headOfHouse": "Pomona Sprout",
+    "ghost": "Fat Friar",
+    "location": "Hufflepuff Basement"
+  },
+  {
+    "name": "Ravenclaw",
+    "founder": "Rowena Ravenclaw",
+    "traits": "Members are known for their wisdom, cleverness, creativity, intellect, and wit.",
+    "headOfHouse": "Filius Flitwick",
+    "ghost": "Helena Ravenclaw aka The Grey Lady",
+    "location": "Ravenclaw Tower"
+  }
+]

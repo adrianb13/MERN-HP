@@ -1,6 +1,7 @@
 import * as types from "../actions/types";
 
 const initialState = {
+  housesInfo: [],
   apiCharacters: [],
   apiSpells: [],
   dbCharacters: [],
@@ -10,6 +11,10 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
   switch(action.type){
+    case types.HOUSES_INFO_SUCCESS:
+      return Object.assign({}, state, {
+        housesInfo: state.housesInfo.concat(action.houses)
+      })
     case types.GET_APICHARACTERS_SUCCESS:
       return Object.assign({}, state, {
         apiCharacters: state.apiCharacters.concat(action.characters)

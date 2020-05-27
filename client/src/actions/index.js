@@ -1,6 +1,13 @@
 import API from "../utils/API";
 import * as types from "./types";
+import houses from "../assets/data/houses.json";
 
+//Json
+export const loadHouseInfo = () => {
+  return {type: types.HOUSES_INFO_SUCCESS, houses}
+};
+
+//API
 export const getSorted = () => {
   return (dispatch) => {
     return API.getSorted()

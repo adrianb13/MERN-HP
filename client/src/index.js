@@ -6,10 +6,11 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 import store from "./store";
-import { getAPICharacters, getAPISpells } from "./actions/index";
+import { getAPICharacters, getAPISpells, loadHouseInfo } from "./actions/index";
 
 store.dispatch(getAPICharacters());
 store.dispatch(getAPISpells());
+store.dispatch(loadHouseInfo());
 
 ReactDOM.render(
   <Provider store={store}>
